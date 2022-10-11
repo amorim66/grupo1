@@ -89,7 +89,10 @@ public class GUIProdutoController {
 		if (result.hasErrors()) {
 			logger.info(">>>>>> servico para atualizacao de dados com erro => " + result.getFieldError().toString());
 			produto.setId(id);
-			return new ModelAndView("atualizarProduto");
+			ModelAndView mv = new ModelAndView("atualizarProduto");
+			List<String> lista = Arrays.asList("","Garrafa", "Camiseta", "Chinelo", "Caneca");
+        	mv.addObject("lista", lista);
+			return mv;
 		} else {
 			servico.atualiza(produto);
 			modelAndView.addObject("produtos", servico.consultaTodos());

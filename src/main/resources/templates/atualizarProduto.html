@@ -34,7 +34,7 @@
 								<select th:field="*{categoria} ">
 									<option th:each="p : ${lista}" th:value="${p}" th:text="${p}" /option>
 								</select>
-								<span class="text-danger">
+								<span th:if="${#fields.hasErrors('categoria')}" th:errors="*{categoria}" class="text-danger">
 								</span>
 							</div>
 						</div>
@@ -50,7 +50,7 @@
 							<div class="form-group col-md-8">
 								<label for="nome" class="col-form-label">Valor Venda</label>
 								<input type="text"  th:field="*{valorVenda}" class="form-control" id="valVenda" placeholder="Valor venda">
-								<span class="text-danger">
+								<span th:if="${#fields.hasErrors('valorVenda')}" th:errors="*{valorVenda}" class="text-danger">
 								</span>
 							</div>
 						</div>
@@ -58,7 +58,7 @@
 							<div class="form-group col-md-8">
 								<label for="cep" class="col-form-label">Quantidade Estoque</label>
 								<input type="text"  th:field="*{quantidadeEstoque}" class="form-control" id="estoque" placeholder="Estoque">
-								<span class="text-danger"></span>
+								<span th:if="${#fields.hasErrors('quantidadeEstoque')}" th:errors="*{quantidadeEstoque}" class="text-danger"></span>
 							</div>
 						</div>
                         <div class="row">
