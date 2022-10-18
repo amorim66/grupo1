@@ -7,7 +7,7 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.fatec.group1.model.Produto;
-import com.fatec.group1.model.ProdutoRepository;
+import com.fatec.group1.repository.ProdutoRepository;
 
 
 @Service

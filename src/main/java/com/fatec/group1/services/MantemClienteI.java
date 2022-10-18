@@ -13,7 +13,7 @@ import org.springframework.web.client.ResourceAccessException;
 import org.springframework.web.client.RestTemplate;
 import com.fatec.group1.model.Cliente;
 import com.fatec.group1.model.Endereco;
-import com.fatec.group1.model.ClienteRepository;
+import com.fatec.group1.repository.ClienteRepository;
 
 @Service
 public class MantemClienteI implements MantemCliente {

@@ -4,10 +4,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.PasswordEncoder; 
+import org.springframework.security.crypto.password.PasswordEncoder;
 
-import com.fatec.group1.model.UserAppRepository;
-import com.fatec.group1.model.UsuarioApp; 
+import com.fatec.group1.model.UsuarioApp;
+import com.fatec.group1.repository.UserAppRepository; 
+
+
 @SpringBootApplication
 public class Grupo1Application {
 	@Autowired
@@ -25,6 +27,7 @@ public class Grupo1Application {
 		usuario.setUserName("jose");
 		usuario.setPassword(passwordEncoder.encode("123"));
 		repository.save(usuario);
+		
 	}
 
 	public BCryptPasswordEncoder pc() {
